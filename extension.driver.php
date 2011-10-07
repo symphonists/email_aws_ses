@@ -6,7 +6,7 @@
 	 * @package Email Amazon SES extension
 	 * @author Nick Dunn
 	 */
-	Class extension_Aws_Ses extends Extension{
+	Class extension_aws_ses extends Extension{
 
 		/**
 		 * Extension information
