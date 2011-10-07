@@ -8,8 +8,8 @@
 		protected $_api_key;
 
 		public function __construct(){
-			require_once(EXTENSIONS . '/email_amazon_ses/lib/aws-sdk-for-php/sdk.class.php');
-			require_once(EXTENSIONS . '/email_amazon_ses/lib/aws-sdk-for-php/services/ses.class.php');
+			require_once(EXTENSIONS . '/aws_ses/lib/aws-sdk-for-php/sdk.class.php');
+			require_once(EXTENSIONS . '/aws_ses/lib/aws-sdk-for-php/services/ses.class.php');
 			parent::__construct();
 		}
 
@@ -23,10 +23,10 @@
 			
 			try {
 				
-				$from_email = Symphony::Configuration()->get('from_address', 'email_amazon_ses');
+				$from_email = Symphony::Configuration()->get('from_address', 'aws_ses');
 				$this->setSenderEmailAddress($from_email);
 				
-				$from_name = Symphony::Configuration()->get('from_name', 'email_amazon_ses');
+				$from_name = Symphony::Configuration()->get('from_name', 'aws_ses');
 				$this->setSenderName($from_name);
 				
 				$this->validate();
@@ -99,8 +99,8 @@
 				
 				// create new wrapper with API keys
 				$amazon_ses = new AmazonSES(
-					Symphony::Configuration()->get('aws_key', 'email_amazon_ses'),
-					Symphony::Configuration()->get('aws_secret_key', 'email_amazon_ses')
+					Symphony::Configuration()->get('aws_key', 'aws_ses'),
+					Symphony::Configuration()->get('aws_secret_key', 'aws_ses')
 				);
 				
 				// send
@@ -142,22 +142,22 @@
 			$div = new XMLElement('div');
 			$div->setAttribute('class', 'group');
 			$label = Widget::Label(__('From Name'));
-			$label->appendChild(Widget::Input('settings[email_amazon_ses][from_name]', Symphony::Configuration()->get('from_name', 'email_amazon_ses')));
+			$label->appendChild(Widget::Input('settings[aws_ses][from_name]', Symphony::Configuration()->get('from_name', 'aws_ses')));
 			$div->appendChild($label);
 			
 			$label = Widget::Label(__('From Address'));
-			$label->appendChild(Widget::Input('settings[email_amazon_ses][from_address]', Symphony::Configuration()->get('from_address', 'email_amazon_ses')));
+			$label->appendChild(Widget::Input('settings[aws_ses][from_address]', Symphony::Configuration()->get('from_address', 'aws_ses')));
 			$div->appendChild($label);
 			$group->appendChild($div);
 
 			$div = new XMLElement('div');
 			$div->setAttribute('class', 'group');
 			$label = Widget::Label(__('Amazon Web Services Key'));
-			$label->appendChild(Widget::Input('settings[email_amazon_ses][aws_key]', Symphony::Configuration()->get('aws_key', 'email_amazon_ses')));
+			$label->appendChild(Widget::Input('settings[aws_ses][aws_key]', Symphony::Configuration()->get('aws_key', 'aws_ses')));
 			$div->appendChild($label);
 
 			$label = Widget::Label(__('Amazon Web Services Secret Key'));
-			$label->appendChild(Widget::Input('settings[email_amazon_ses][aws_secret_key]', Symphony::Configuration()->get('aws_secret_key', 'email_amazon_ses')));
+			$label->appendChild(Widget::Input('settings[aws_ses][aws_secret_key]', Symphony::Configuration()->get('aws_secret_key', 'aws_ses')));
 			$div->appendChild($label);
 			$group->appendChild($div);
 

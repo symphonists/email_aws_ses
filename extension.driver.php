@@ -6,7 +6,7 @@
 	 * @package Email Amazon SES extension
 	 * @author Nick Dunn
 	 */
-	Class extension_Email_Amazon_Ses extends Extension{
+	Class extension_Aws_Ses extends Extension{
 
 		/**
 		 * Extension information
@@ -31,7 +31,7 @@
 			 * preferences are defined in the email gateway class,
 			 * but removing upon uninstallation must be handled here;
 			 */
-			Symphony::Configuration()->remove('email_amazon_ses');
+			Symphony::Configuration()->remove('aws_ses');
 			Administration::instance()->saveConfig();
 			return TRUE;
 		}
