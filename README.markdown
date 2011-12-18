@@ -1,10 +1,5 @@
 # Amazon Simple Email Services (SES) Email Gateway
 
-- Version: 1.0
-- Date: 2011-03-09
-- Requirements: Symphony 2.2 or later
-- Authors: Nick Dunn
-
 ## Summary
 
 Uses Symphony's core email API to send emails via Amazon SES (http://aws.amazon.com/ses/).
@@ -12,3 +7,7 @@ Uses Symphony's core email API to send emails via Amazon SES (http://aws.amazon.
 ## Usage
 
 Once installed go to System > Preferences and fill in your Amazon SES credentials. Under "Email Gateway" choose "Amazon Simple Email Service" to use this extension as your default email gateway.
+
+## Credits
+
+Many thanks to [Michael Hay](http://korelogic.co.uk) for funding this extension and permitting it to be released as open source.
