@@ -5,6 +5,7 @@
 	<repo type="github">https://github.com/symphonists/email_aws_ses</repo>
 	<types>
 		<type>Third Party Integration</type>
+		<type>Email</type>
 	</types>
 	<authors>
 		<author>
