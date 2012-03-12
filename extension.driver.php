@@ -7,22 +7,7 @@
 	 * @author Nick Dunn
 	 */
 	Class extension_email_aws_ses extends Extension{
-
-		/**
-		 * Extension information
-		 */
-		public function about(){
-			return array(
-				'name'         => 'Email Gateway: Amazon Simple Email Service',
-				'version'      => '1.0',
-				'release-date' => '2011-03-09',
-				'author' => array(
-					'name' => 'Nick Dunn',
-					'website' => 'https://nick-dunn.co.uk',
-				)
-			);
-		}
-
+        
 		/**
 		 * Function to be executed on uninstallation
 		 */
