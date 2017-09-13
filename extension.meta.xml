@@ -13,8 +13,10 @@
 		</author>
 	</authors>
 	<releases>
-		<release version="1.1.1" date="2017-09-13" min="2.3.x" max="2.x.x">
+		<release version="1.2.0" date="2017-09-13" min="2.6.x" max="2.x.x">
 			- Symphony compatibility update
+		</release>
+		<release version="1.1.1" date="2017-09-13" min="2.3.x" max="2.5.x">
 			- Code format
 		</release>
 		<release version="1.1" date="2012-03-12" min="2.3.x" />

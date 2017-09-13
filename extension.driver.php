@@ -18,7 +18,7 @@ class extension_email_aws_ses extends Extension
          * but removing upon uninstallation must be handled here;
          */
         Symphony::Configuration()->remove('email_aws_ses');
-        Administration::instance()->saveConfig();
+        Symphony::Configuration()->write();
         return true;
     }
 }
