@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extension id="email_aws_ses" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+<extension id="email_aws_ses" status="released" xmlns="http://getsymphony.com/schemas/extension/1.0">
 	<name>Amazon Simple Email Service Email Gateway</name>
 	<description>Use Amazon SES to send email</description>
 	<repo type="github">https://github.com/symphonists/email_aws_ses</repo>
@@ -13,6 +13,9 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="1.2.1" date="2018-01-16" min="2.6.x" max="2.x.x">
+			- Sanitize configuration values before output
+		</release>
 		<release version="1.2.0" date="2017-09-13" min="2.6.x" max="2.x.x">
 			- Symphony compatibility update
 		</release>
