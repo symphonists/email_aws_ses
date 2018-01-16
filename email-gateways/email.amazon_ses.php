@@ -149,22 +149,22 @@ class Amazon_SesGateway extends EmailGateway
         $div = new XMLElement('div');
         $div->setAttribute('class', 'group');
         $label = Widget::Label(__('From Name'));
-        $label->appendChild(Widget::Input('settings[email_aws_ses][from_name]', Symphony::Configuration()->get('from_name', 'email_aws_ses')));
+        $label->appendChild(Widget::Input('settings[email_aws_ses][from_name]', General::sanitize(Symphony::Configuration()->get('from_name', 'email_aws_ses'))));
         $div->appendChild($label);
         
         $label = Widget::Label(__('From Address'));
-        $label->appendChild(Widget::Input('settings[email_aws_ses][from_address]', Symphony::Configuration()->get('from_address', 'email_aws_ses')));
+        $label->appendChild(Widget::Input('settings[email_aws_ses][from_address]', General::sanitize(Symphony::Configuration()->get('from_address', 'email_aws_ses'))));
         $div->appendChild($label);
         $group->appendChild($div);
 
         $div = new XMLElement('div');
         $div->setAttribute('class', 'group');
         $label = Widget::Label(__('Amazon Web Services Key'));
-        $label->appendChild(Widget::Input('settings[email_aws_ses][aws_key]', Symphony::Configuration()->get('aws_key', 'email_aws_ses')));
+        $label->appendChild(Widget::Input('settings[email_aws_ses][aws_key]', General::sanitize(Symphony::Configuration()->get('aws_key', 'email_aws_ses'))));
         $div->appendChild($label);
 
         $label = Widget::Label(__('Amazon Web Services Secret Key'));
-        $label->appendChild(Widget::Input('settings[email_aws_ses][aws_secret_key]', Symphony::Configuration()->get('aws_secret_key', 'email_aws_ses')));
+        $label->appendChild(Widget::Input('settings[email_aws_ses][aws_secret_key]', General::sanitize(Symphony::Configuration()->get('aws_secret_key', 'email_aws_ses'))));
         $div->appendChild($label);
         $group->appendChild($div);
 
